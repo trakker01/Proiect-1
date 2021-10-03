@@ -59,6 +59,6 @@ public class Apartament {
     }
 
     public String toString(){
-        return Tip + this.Put_price + this. Put_address + this.Put_meters + this.Put_room + this.Put_number;
+        return Tip + " " + this.Put_price + " euro " + this. Put_address + " " + this.Put_meters + " metri patrati " + this.Put_room + " camere " + this.Put_number + " numar de telefon";
     }
 }
