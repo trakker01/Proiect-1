@@ -1,25 +1,27 @@
-import java.util.*;
 import java.lang.String;
 import java.util.Scanner;
+import java.util.Vector;
+import java.io.File;
+import java.io.IOException;
 
 public class Apartament {
 
     Scanner sc = new Scanner(System.in);
 
-    private double Put_price;
-    private String Put_address = "";
+    private int Put_price;
+    private String Put_address;
     private String Tip = "Apartament";
-    private double Put_room;
-    private double Put_meters;
-    private double Put_number;
+    private int Put_room;
+    private int Put_meters;
+    private int Put_number;
 
-    public double setPrice(double price)
+    public int setPrice(int price)
     {
-        this.Put_price = sc.nextDouble();
+        this.Put_price = price;
         return this.Put_price;
     }
 
-    public double getPut_price() {
+    public int getPut_price() {
         return this.Put_price;
     }
 
@@ -31,30 +33,30 @@ public class Apartament {
         return this.Put_address;
     }
 
-    public double setPut_room(double room)
+    public int setPut_room(int room)
     {
-        this.Put_room = sc.nextDouble();
+        this.Put_room = room;
         return this.Put_room;
     }
-    public double getPut_room() {
+    public int getPut_room() {
         return this.Put_room;
     }
 
-    public double setPut_meters(double meters)
+    public int setPut_meters(int meters)
     {
-        this.Put_meters = sc.nextDouble();
+        this.Put_meters = meters;
         return this.Put_meters;
     }
-    public double getPut_meters() {
+    public int getPut_meters() {
         return this.Put_meters;
     }
 
-    public double setPut_number(double number)
+    public int setPut_number(int number)
     {
-        this.Put_number = sc.nextDouble();
+        this.Put_number = number;
         return this.Put_number;
     }
-    public double getPut_number() {
+    public int getPut_number() {
         return this.Put_number;
     }
 
