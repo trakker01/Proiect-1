@@ -4,12 +4,13 @@ import java.util.Scanner;
 public class Site {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Apartament apart = new Apartament();
         char access_menu = 'y';
         while (access_menu == 'y' || access_menu == 'Y')
         {   System.out.println("Bine ati venit pe site-ul de chirii. Tastati numarul respctiv pentru meniu-ul care doriti sa accesati ");
             System.out.println("1.Apartamente");
             System.out.println("2.Garsoniera");
-            System.out.println("3.Casa/camera");
+            System.out.println("3.Camera");
             System.out.println("4.Adauga oferta");
 
             int Menu_number = sc.nextInt();
