@@ -1,11 +1,23 @@
+import java.io.BufferedWriter;
 import java.lang.String;
 import java.util.Scanner;
 import java.util.Vector;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
-public class Site
-{
+public class Site {
+
+    public static void appendStrtoFile(String fileName, String str) {
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter(fileName, true));
+            out.write("\n" + str);
+            out.close();
+        } catch (IOException e) {
+            System.out.println("A aparut o eroare" + e);
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
         int price, room, meter, number;
@@ -77,9 +89,8 @@ public class Site
                     e.printStackTrace();
                 }
 
-                for (int i = 0; i < Camera_V.size(); i++)
-                {
-                    System.out.println(i+"."+Camera_V.get(i) + " ");
+                for (int i = 0; i < Camera_V.size(); i++) {
+                    System.out.println(i + "." + Camera_V.get(i) + " ");
                 }
             } else if (Menu_number == 4) {
                 System.out.println("Alegeti tipul de oferta pe care doriti sa adaugati.");
@@ -96,8 +107,25 @@ public class Site
                     price = sc.nextInt();
                     apart.setPrice(price);
                     System.out.print("\nScrieti numarul de camere ");
-                    room  = sc.nextInt();
+                    room = sc.nextInt();
                     apart.setPut_room(room);
+                    System.out.print("\nScrieti numarul de metri patrati ");
+                    meter = sc.nextInt();
+                    apart.setPut_meters(meter);
+                    System.out.print("\nScrieti numarul de telefon \n");
+                    number = sc.nextInt();
+                    apart.setPut_number(number);
+                    System.out.print("Se adauga oferta de chirie apartament in site la sectiunea de apartamente: ");
+                    System.out.println(apart.toString());
+
+                    appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Apartamente.txt", apart.toString());
+                } else if (choose == 2) {
+                    System.out.print("\nScrieti addresa pentru apartament ");
+                    address = sc.next();
+                    apart.setPut_address(address);
+                    System.out.print("\nSscrieti pretul in euro ");
+                    price = sc.nextInt();
+                    apart.setPrice(price);
                     System.out.print("\nScrieti numarul de metri patrati ");
                     meter = sc.nextInt();
                     apart.setPut_meters(meter);
@@ -105,13 +133,7 @@ public class Site
                     number = sc.nextInt();
                     apart.setPut_number(number);
                     System.out.println(apart.toString());
-                }
-                else if (choose == 2)
-                {
-                    System.out.println("Ati introdus un numar care nu este disponibil in meniu");
-                }
-                else if (choose == 3)
-                {
+                } else if (choose == 3) {
                     System.out.println("Ati introdus un numar care nu este disponibil in meniu");
                 } else
                     System.out.println("Ati introdus un numar care nu este disponibil in meniu");

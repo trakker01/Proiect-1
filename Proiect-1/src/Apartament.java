@@ -1,8 +1,5 @@
 import java.lang.String;
 import java.util.Scanner;
-import java.util.Vector;
-import java.io.File;
-import java.io.IOException;
 
 public class Apartament {
 
@@ -61,6 +58,6 @@ public class Apartament {
     }
 
     public String toString(){
-        return Tip + " " + this.Put_price + " euro " + this. Put_address + " " + this.Put_meters + " metri patrati " + this.Put_room + " camere " + this.Put_number + " numar de telefon";
+        return Tip + " cu pretul de " + this.Put_price + " euro cu adresa urmatoare: " + this. Put_address + " cu o marime de " + this.Put_meters + " metri patrati cu " + this.Put_room + " camere. Contact la acest numar de telefon " + this.Put_number;
     }
 }
