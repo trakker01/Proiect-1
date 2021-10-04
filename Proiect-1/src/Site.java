@@ -120,7 +120,7 @@ public class Site {
                     System.out.print("\nScrieti numarul de metri patrati ");
                     meter = sc.nextInt();
                     apart.setPut_meters(meter);
-                    System.out.print("\nScrieti numarul de telefon \n");
+                    System.out.print("\nScrieti numarul de telefon ");
                     number = sc.nextInt();
                     apart.setPut_number(number);
                     System.out.print("Se adauga oferta de chirie apartament in site la sectiunea de apartamente: ");
