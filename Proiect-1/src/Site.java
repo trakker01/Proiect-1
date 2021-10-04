@@ -23,9 +23,11 @@ public class Site {
         int price, room, meter, number;
         String address;
 
-        Vector<String> Apartamente_V = new Vector<String>();
-        Vector<String> Garsoniera_V = new Vector<String>();
-        Vector<String> Camera_V = new Vector<String>();
+        int a = 0, g = 0, c = 0;
+
+        Vector<String> Apartamente_V = new Vector<>();
+        Vector<String> Garsoniera_V = new Vector<>();
+        Vector<String> Camera_V = new Vector<>();
 
         Apartament apart = new Apartament();
         Garsoniera gars = new Garsoniera();
@@ -33,7 +35,7 @@ public class Site {
 
         char access_menu = 'y';
         while (access_menu == 'y' || access_menu == 'Y') {
-            System.out.println("Bine ati venit pe site-ul de chirii. Tastati numarul corespunzator cu cel din meniu ");
+            System.out.println("Bine ati venit pe site-ul de chirii. Tastati numarul corespunzator cu cel din meniu: ");
             System.out.println("1.Apartamente");
             System.out.println("2.Garsoniera");
             System.out.println("3.Camera");
@@ -54,8 +56,9 @@ public class Site {
                     System.out.println("A aparut o eroare cu list de oferte. ");
                     e.printStackTrace();
                 }
-                for (int i = 0; i < Apartamente_V.size(); i++) {
+                for (int i = a; i < Apartamente_V.size(); i++) {
                     System.out.println(i + ". " + Apartamente_V.get(i) + " ");
+                    a++;
                 }
 
             } else if (Menu_number == 2) {
@@ -72,8 +75,11 @@ public class Site {
                     e.printStackTrace();
                 }
 
-                for (int i = 0; i < Garsoniera_V.size(); i++)
+                for (int i = g; i < Garsoniera_V.size(); i++)
+                {
                     System.out.println(Garsoniera_V.get(i) + " ");
+                    g++;
+                }
 
             } else if (Menu_number == 3) {
                 try {
@@ -89,8 +95,10 @@ public class Site {
                     e.printStackTrace();
                 }
 
-                for (int i = 0; i < Camera_V.size(); i++) {
+                for (int i = c; i < Camera_V.size(); i++)
+                {
                     System.out.println(i + "." + Camera_V.get(i) + " ");
+                    c++;
                 }
             } else if (Menu_number == 4) {
                 System.out.println("Alegeti tipul de oferta pe care doriti sa adaugati.");
@@ -120,28 +128,48 @@ public class Site {
 
                     appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Apartamente.txt", apart.toString());
                 } else if (choose == 2) {
-                    System.out.print("\nScrieti addresa pentru apartament ");
+                    System.out.print("\nScrieti addresa pentru garosniera ");
                     address = sc.next();
-                    apart.setPut_address(address);
+                    gars.setPut_address(address);
                     System.out.print("\nSscrieti pretul in euro ");
                     price = sc.nextInt();
-                    apart.setPrice(price);
+                    gars.setPrice(price);
                     System.out.print("\nScrieti numarul de metri patrati ");
                     meter = sc.nextInt();
-                    apart.setPut_meters(meter);
+                    gars.setPut_meters(meter);
                     System.out.print("\nScrieti numarul de telefon ");
                     number = sc.nextInt();
-                    apart.setPut_number(number);
+                    gars.setPut_number(number);
                     System.out.println(apart.toString());
+
+                    appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Garsoniera.txt", gars.toString());
                 } else if (choose == 3) {
-                    System.out.println("Ati introdus un numar care nu este disponibil in meniu");
+                    String la;
+                    System.out.print("Scrieti daca camera se afla la apartament/bloc sau casa ");
+                    la = sc.next();
+                    cam.setPut_Locatie(la);
+                    System.out.print("\nScrieti addresa pentru unde se afla chiria ");
+                    address = sc.next();
+                    cam.setPut_address(address);
+                    System.out.print("\nSscrieti pretul in euro ");
+                    price = sc.nextInt();
+                    cam.setPrice(price);
+                    System.out.print("\nScrieti numarul de metri patrati ");
+                    meter = sc.nextInt();
+                    cam.setPut_meters(meter);
+                    System.out.print("\nScrieti numarul de telefon ");
+                    number = sc.nextInt();
+                    cam.setPut_number(number);
+                    System.out.println(apart.toString());
+
+                    appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Camera.txt", cam.toString());
                 } else
                     System.out.println("Ati introdus un numar care nu este disponibil in meniu");
             } else
                 System.out.println("Ati introdus un numar care nu este disponibil in meniu");
             System.out.println("Daca doriti sa va intoarceti la meniul prinicpal apasati y daca nu apasati orice altat tasta");
             access_menu = sc.next().charAt(0);
-            System.out.println("\n\n");
+            System.out.println(" ");
         }
     }
 }

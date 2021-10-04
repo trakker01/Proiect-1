@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class Garsoniera {
 
-    Scanner sc = new Scanner(System.in);
-    private String Tip = "Garsoniera";
+    private final String Tip = "Garsoniera";
 
     private int Put_price;
     private String Put_address;
@@ -48,6 +47,6 @@ public class Garsoniera {
     }
 
     public String toString() {
-        return Tip + " cu pretul de " + this.Put_price + " euro cu adresa urmatoare: " + this.Put_address + " cu o marime de " + this.Put_meters + " metri patrati " + ". Contact la acest numar de telefon " + this.Put_number;
+        return Tip + " cu pretul de " + this.Put_price + " euro cu adresa urmatoare: " + this.Put_address + " cu o marime de " + this.Put_meters + " metri patrati " + ". Contact la acest numar de telefon " + this.Put_number + ".";
     }
 }
