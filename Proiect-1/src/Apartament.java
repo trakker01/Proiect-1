@@ -56,6 +56,6 @@ public class Apartament {
     }
 
     public String toString() {
-        return Tip + " cu pretul de " + this.Put_price + " euro cu adresa urmatoare: " + this.Put_address + " cu o marime de " + this.Put_meters + " metri patrati cu " + this.Put_room + " camere. Contact la acest numar de telefon " + this.Put_number;
+        return Tip + " cu pretul de " + this.Put_price + " euro cu adresa urmatoare: " + this.Put_address + " cu o marime de " + this.Put_meters + " metri patrati cu " + this.Put_room + " camere. Contact la acest numar de telefon " + this.Put_number +".";
     }
 }
