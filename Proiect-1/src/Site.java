@@ -75,8 +75,7 @@ public class Site {
                     e.printStackTrace();
                 }
 
-                for (int i = g; i < Garsoniera_V.size(); i++)
-                {
+                for (int i = g; i < Garsoniera_V.size(); i++) {
                     System.out.println(Garsoniera_V.get(i) + " ");
                     g++;
                 }
@@ -95,8 +94,7 @@ public class Site {
                     e.printStackTrace();
                 }
 
-                for (int i = c; i < Camera_V.size(); i++)
-                {
+                for (int i = c; i < Camera_V.size(); i++) {
                     System.out.println(i + "." + Camera_V.get(i) + " ");
                     c++;
                 }

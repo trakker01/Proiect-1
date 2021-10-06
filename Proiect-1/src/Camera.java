@@ -1,13 +1,12 @@
 import java.lang.String;
-import java.util.Scanner;
 
 public class Camera {
-    Scanner sc = new Scanner(System.in);
-    private String Tip = "Camera";
+
+    private final String Tip = "Camera";
     private String la;
+    private String Put_address;
 
     private int Put_price;
-    private String Put_address;
     private int Put_meters;
     private int Put_number;
 

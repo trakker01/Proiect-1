@@ -1,12 +1,11 @@
 import java.lang.String;
-import java.util.Scanner;
 
 public class Garsoniera {
 
     private final String Tip = "Garsoniera";
+    private String Put_address;
 
     private int Put_price;
-    private String Put_address;
     private int Put_meters;
     private int Put_number;
 
