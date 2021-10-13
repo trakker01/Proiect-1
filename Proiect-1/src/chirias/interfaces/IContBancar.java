@@ -13,4 +13,6 @@ public interface IContBancar {
     public abstract int Month();
 
     public abstract int Year();
+
+    public abstract int Sold();
 }

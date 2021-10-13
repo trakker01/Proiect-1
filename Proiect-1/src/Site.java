@@ -69,6 +69,7 @@ public class Site {
                 if(raspuns >= 0 && raspuns <= a)
                 {
                     System.out.println(raspuns + ". " + Apartamente_V.get(raspuns) + " ");
+                    String offer = Apartamente_V.get(raspuns);
 
                 }
 

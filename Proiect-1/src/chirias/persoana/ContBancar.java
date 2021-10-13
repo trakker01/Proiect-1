@@ -20,6 +20,7 @@ public class ContBancar implements IContBancar {
     private int year;
     private int month;
     private String cnp;
+    private int sold;
 
     @Override
     public String CNP(){
@@ -55,5 +56,12 @@ public class ContBancar implements IContBancar {
     public int Year(){
         month = sc.nextInt();
         return year;
+    }
+
+    @Override
+    public int Sold(){
+        System.out.print("Sold-ul in lei: ");
+        sold = sc.nextInt();
+        return sold;
     }
 }
