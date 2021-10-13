@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import chirias.persoana.*;
+
 public class Site {
 
     public static void appendStrtoFile(String fileName, String str) {
@@ -59,6 +61,15 @@ public class Site {
                 for (int i = a; i < Apartamente_V.size(); i++) {
                     System.out.println(i + ". " + Apartamente_V.get(i) + " ");
                     a++;
+                }
+
+                int raspuns;
+                System.out.print("Alegeti oferta pe care o doriti sa o inchiriatai prin tastand numarul ofertei ");
+                raspuns = sc.nextInt();
+                if(raspuns >= 0 && raspuns <= a)
+                {
+                    System.out.println(raspuns + ". " + Apartamente_V.get(raspuns) + " ");
+
                 }
 
             } else if (Menu_number == 2) {

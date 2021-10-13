@@ -2,11 +2,11 @@ package chirias.interfaces;
 
 public interface IContSite {
 
-    public abstract String FullName();
+    String FullName();
 
-    public abstract boolean isMajor();
+    boolean isMajor();
 
-    public abstract String AccountMail();
+    String AccountMail();
 
-    public abstract String PhoneNumber();
+    String PhoneNumber();
 }
