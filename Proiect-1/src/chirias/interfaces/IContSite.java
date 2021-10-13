@@ -6,7 +6,7 @@ public interface IContSite {
 
     public abstract int isMajor();
 
-    public abstract String CNP();
+    public abstract String AccountMail();
 
     public abstract String PhoneNumber();
 }
