@@ -2,12 +2,13 @@ package chirias.persoana;
 
 
 import chirias.interfaces.IContBancar;
+
 import java.util.Scanner;
 import java.util.Random;
 
 public class ContBancar implements IContBancar {
 
-    public ContBancar(){
+    public ContBancar() {
 
     }
 
@@ -23,43 +24,43 @@ public class ContBancar implements IContBancar {
     private int sold;
 
     @Override
-    public String CNP(){
+    public String CNP() {
         cnp = sc.next();
         return cnp;
     }
 
     @Override
-    public String FullName(){
+    public String FullName() {
         name = sc.next();
         return name;
     }
 
     @Override
-    public String PhoneNumber(){
+    public String PhoneNumber() {
         phone = sc.next();
         return phone;
     }
 
     @Override
-    public String NumberCard(){
+    public String NumberCard() {
         card_whole = sc.next();
         return card_whole;
     }
 
     @Override
-    public int Month(){
+    public int Month() {
         month = sc.nextInt();
         return month;
     }
 
     @Override
-    public int Year(){
+    public int Year() {
         month = sc.nextInt();
         return year;
     }
 
     @Override
-    public int Sold(){
+    public int Sold() {
         System.out.print("Sold-ul in lei: ");
         sold = sc.nextInt();
         return sold;

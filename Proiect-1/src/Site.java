@@ -66,8 +66,7 @@ public class Site {
                 int raspuns;
                 System.out.print("Alegeti oferta pe care o doriti sa o inchiriatai prin tastand numarul ofertei ");
                 raspuns = sc.nextInt();
-                if(raspuns >= 0 && raspuns <= a)
-                {
+                if (raspuns >= 0 && raspuns <= a) {
                     System.out.println(raspuns + ". " + Apartamente_V.get(raspuns) + " ");
                     String offer = Apartamente_V.get(raspuns);
 
