@@ -1,12 +1,9 @@
 package Site.oferte;
 
-import java.io.BufferedWriter;
+import java.io.*;
 import java.lang.String;
 import java.util.Scanner;
 import java.util.Vector;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class Site {
 
@@ -21,7 +18,44 @@ public class Site {
         }
     }
 
+   public void delete(String filename, int startline, int numlines, int notneeded)
+    {
+        try
+        {
+            BufferedReader br = new BufferedReader(new FileReader(filename));
+
+            //String buffer to store contents of the file
+            StringBuffer sb=new StringBuffer("");
+
+            //Keep track of the line number
+            int linenumber=1;
+            String line;
+
+            while((line=br.readLine())!=null)
+            {
+                //Store each valid line in the string buffer
+                if(linenumber!=notneeded)
+                    sb.append(line+"\n");
+                linenumber++;
+            }
+            if(startline+numlines>linenumber)
+                System.out.println("End of file reached.");
+            br.close();
+
+            FileWriter fw = new FileWriter(new File(filename));
+            //Write entire string buffer into the file
+            fw.write(sb.toString());
+            fw.close();
+        }
+        catch (Exception e)
+        {
+            System.out.println("Something went horribly wrong: "+e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
+
+
         int a = 0, g = 0, c = 0;
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
         int price, room, meter, number;
@@ -47,7 +81,7 @@ public class Site {
 
             if (Menu_number == 1) {
                 try {
-                    File Lista_apartamente = new File("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\chirias\\oferte\\Apartamente.txt");
+                    File Lista_apartamente = new File("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Site\\oferte\\Apartamente.txt");
 
                     Scanner sl = new Scanner(Lista_apartamente);
 
@@ -62,6 +96,8 @@ public class Site {
                     System.out.println(i + ". " + Apartamente_V.get(i) + " ");
                     a++;
                 }
+
+
 
             } else if (Menu_number == 2) {
                 try {
@@ -168,6 +204,7 @@ public class Site {
             } else
                 System.out.println("Ati introdus un numar care nu este disponibil in meniu");
             System.out.println("Daca doriti sa va intoarceti la meniul prinicpal apasati y daca nu apasati orice altat tasta");
+
             access_menu = sc.next().charAt(0);
             System.out.println(" ");
         }

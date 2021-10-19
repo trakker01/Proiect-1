@@ -10,7 +10,6 @@ import java.util.Vector;
 public class Home {
     private JButton ApartamenteButton;
     private JButton GarsoniereButton;
-    private JButton CamereButton;
     private JButton AdaugatiOferteButton;
     protected JPanel MyPanel;
     private JButton Apartament_alg;
@@ -93,32 +92,6 @@ public class Home {
 
             }
         });
-
-        CamereButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent w) {
-                int c = 0;
-                Vector<String> Camera_V = new Vector<>();
-
-                try {
-                    File Lista_camera = new File("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Site\\oferte\\Camera.txt");
-
-                    Scanner sl = new Scanner(Lista_camera);
-
-                    while (sl.hasNextLine()) {
-                        Camera_V.add(sl.nextLine());
-                    }
-                } catch (IOException e) {
-                    System.out.println("A aparut o eroare cu lista de oferte. ");
-                    e.printStackTrace();
-                }
-                for (int i = c; i < Camera_V.size(); i++) {
-                    System.out.println(i + "." + Camera_V.get(i) + " ");
-                    c++;
-                }
-            }
-        });
-
         AdaugatiOferteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent x) {
