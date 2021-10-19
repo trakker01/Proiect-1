@@ -16,7 +16,7 @@ public class Apartamente_gui extends JFrame{
     protected JTextField Telefon;
     protected JTextField Email;
     public JPanel Apartamente;
-    protected JButton Interesat;
+    public JButton Interesat;
     protected JButton PlatitiAcuma;
     private JButton MainMenu;
     private JTextField Oferta;
