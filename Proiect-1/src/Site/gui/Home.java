@@ -14,7 +14,6 @@ public class Home {
     protected JPanel MyPanel;
     private JButton Apartament_alg;
     private JButton Garsoniera_alg;
-    private JButton Camera_alg;
 
     public Home() {
 
