@@ -7,10 +7,11 @@ import java.io.*;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Vector;
+
 import Site.oferte.Site;
 import Site.persoana.*;
 
-public class Apartamente_gui extends JFrame{
+public class Apartamente_gui extends JFrame {
     protected JTextField Nume;
     protected JTextField Varsta;
     protected JTextField Telefon;
@@ -21,7 +22,7 @@ public class Apartamente_gui extends JFrame{
     private JButton MainMenu;
     private JTextField Oferta;
 
-    public Apartamente_gui(){
+    public Apartamente_gui() {
 
         int a = 0;
         Vector<String> Apartamente_V = new Vector<>();
@@ -45,15 +46,15 @@ public class Apartamente_gui extends JFrame{
         Interesat.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String l = Oferta.getName();
+                String l = Oferta.getText();
                 Integer o = Integer.valueOf(l);
                 User user = new User();
-                user.FullName(Nume.getName());
-                String y = Varsta.getName();
+                user.FullName(Nume.getText());
+                String y = Varsta.getText();
                 Integer v = Integer.valueOf(y);
                 user.isMajor(v);
-                user.AccountMail(Email.getName());
-                user.PhoneNumber(Telefon.getName());
+                user.AccountMail(Email.getText());
+                user.PhoneNumber(Telefon.getText());
             }
         });
 
@@ -61,16 +62,16 @@ public class Apartamente_gui extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 User user = new User();
-                user.FullName(Nume.getName());
-                String y = Varsta.getName();
+                user.FullName(Nume.getText());
+                String y = Varsta.getText();
                 Integer v = Integer.valueOf(y);
                 user.isMajor(v);
-                user.AccountMail(Email.getName());
-                user.PhoneNumber(Telefon.getName());
-                String l = Oferta.getName();
+                user.AccountMail(Email.getText());
+                user.PhoneNumber(Telefon.getText());
+                String l = Oferta.getText();
                 Integer o = Integer.valueOf(l);
                 Apartamente_V.get(o);
-                site.delete("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Site\\oferte\\Apartamente.txt",0, Apartamente_V.size(), o);
+                site.delete("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Site\\oferte\\Apartamente.txt", 0, Apartamente_V.size(), o);
                 Apartamente.setVisible(false);
                 Pay.PannelPlata.setVisible(true);
 
@@ -86,14 +87,7 @@ public class Apartamente_gui extends JFrame{
                 h.MyPanel.setVisible(true);
             }
         });
+        setVisible(true);
     }
 
-    public static void main(String[] args) {
-        JFrame apartamente = new JFrame("Oferta apartament");
-        apartamente.setVisible(true);
-        apartamente.setContentPane(new Apartamente_gui().Apartamente);
-        apartamente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        apartamente.pack();
-
-    }
 }

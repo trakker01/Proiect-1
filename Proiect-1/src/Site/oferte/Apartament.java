@@ -60,4 +60,12 @@ public class Apartament {
     public String toString() {
         return Tip + " cu pretul de " + this.Put_price + " euro cu adresa urmatoare: " + this.Put_address + " cu o marime de " + this.Put_meters + " metri patrati cu " + this.Put_room + " camere. Contact la acest numar de telefon " + this.Put_number + ".";
     }
+
+    public String toString1(int t) {
+        if (t == 1) {
+            return "Apartament la pretul de " + this.Put_price + " cu adresa urmatoare: " + this.Put_address + " cu marimea de " + this.Put_meters + " metri patrati cu " + this.Put_room + " camere. Contact la numarul de telefon urmator: " + this.Put_number + ".";
+        } else if (t == 2) {
+            return "Garsoniera la pretul de " + this.Put_price + " cu adresa urmatoare: " + this.Put_address + " cu marimea de " + this.Put_meters + " metri patrati. Contact la numarul de telefon urmator: " + this.Put_number + ".";
+        } else return null;
+    }
 }

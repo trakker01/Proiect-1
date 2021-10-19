@@ -19,19 +19,20 @@ public class plata {
             @Override
             public void actionPerformed(ActionEvent y) {
                 ContBancar cont = new ContBancar();
-                cont.FullName(NumeCard.getName());
-                cont.NumberCard(NumarCar.getName());
+                cont.FullName(NumeCard.getText());
+                cont.NumberCard(NumarCar.getText());
                 String s;
-                s = AnExpirare.getName();
+                s = AnExpirare.getText();
                 Integer i = Integer.valueOf(s);
                 cont.Year(i);
-                s = LunaExpirare.getName();
+                s = LunaExpirare.getText();
                 Integer i1 = Integer.valueOf(s);
                 cont.Month(i1);
-                s = SoldTotal.getName();
+                s = SoldTotal.getText();
                 Integer i2 = Integer.valueOf(s);
                 cont.Sold(i2);
-                cont.CVC(CVC.getName());
+                cont.CVC(CVC.getText());
+
                 PannelPlata.setVisible(false);
                 Home h = new Home();
                 h.MyPanel.setVisible(true);

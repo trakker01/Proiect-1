@@ -48,9 +48,10 @@ public class Home {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                    MyPanel.setVisible(false);
-                    //Apartamente_gui apart_gui = new Apartamente_gui();
-                    apart_gui.Apartamente.setVisible(true);
+                MyPanel.setVisible(false);
+                //Apartamente_gui apart_gui = new Apartamente_gui();
+                apart_gui.Apartamente.setVisible(true);
+
             }
         });
         apart_gui.Apartamente.setVisible(false);
@@ -86,16 +87,17 @@ public class Home {
             public void actionPerformed(ActionEvent e) {
 
                 MyPanel.setVisible(false);
-                Apartamente_gui apart_gui = new Apartamente_gui();
-                apart_gui.Apartamente.setVisible(true);
-
+                Garsoniera_gui gars = new Garsoniera_gui();
+                gars.PanelG.setVisible(true);
             }
         });
         AdaugatiOferteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent x) {
 
-
+                MyPanel.setVisible(false);
+                adaugare adauga = new adaugare();
+                adauga.Adauga.setVisible(true);
             }
         });
     }
