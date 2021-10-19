@@ -1,6 +1,6 @@
-package chirias.persoana;
+package Site.persoana;
 
-import chirias.interfaces.IContSite;
+import Site.interfaces.IContSite;
 
 import java.util.Scanner;
 
@@ -18,14 +18,14 @@ public class User implements IContSite {
     private String phone;
 
     @Override
-    public String FullName() {
-        name = sc.next();
-        return name;
+    public String FullName(String name) {
+        this.name = name;
+        return this.name;
     }
 
     @Override
-    public boolean isMajor() {
-        age = sc.nextInt();
+    public boolean isMajor(int Age) {
+        this.age = Age;
         if (age >= 18)
             return true;
         else
@@ -33,14 +33,14 @@ public class User implements IContSite {
     }
 
     @Override
-    public String AccountMail() {
-        mail = sc.next();
-        return mail;
+    public String AccountMail(String mail) {
+        this.mail = mail;
+        return this.mail;
     }
 
     @Override
-    public String PhoneNumber() {
-        phone = sc.next();
-        return phone;
+    public String PhoneNumber(String phone) {
+        this.phone = phone;
+        return this.phone;
     }
 }

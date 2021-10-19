@@ -1,9 +1,10 @@
+package Site.oferte;
+
 import java.lang.String;
 
-public class Camera {
+public class Garsoniera {
 
-    private final String Tip = "Camera";
-    private String la;
+    private final String Tip = "Garsoniera";
     private String Put_address;
 
     private int Put_price;
@@ -42,17 +43,11 @@ public class Camera {
         return this.Put_number;
     }
 
-    public String setPut_Locatie(String la) {
-        this.la = la;
-        return this.la;
-    }
-
     public int getPut_number() {
         return this.Put_number;
     }
 
     public String toString() {
-        return Tip + " la " + this.la + " cu pretul de " + this.Put_price + " euro cu adresa urmatoare: " + this.Put_address + " cu o marime de " + this.Put_meters + " metri patrati " + ". Contact la acest numar de telefon " + this.Put_number;
+        return Tip + " cu pretul de " + this.Put_price + " euro cu adresa urmatoare: " + this.Put_address + " cu o marime de " + this.Put_meters + " metri patrati " + ". Contact la acest numar de telefon " + this.Put_number + ".";
     }
 }
-

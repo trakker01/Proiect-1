@@ -1,3 +1,5 @@
+package Site.oferte;
+
 import java.io.BufferedWriter;
 import java.lang.String;
 import java.util.Scanner;
@@ -6,9 +8,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import chirias.persoana.*;
-
 public class Site {
+
 
     public static void appendStrtoFile(String fileName, String str) {
         try {
@@ -21,11 +22,10 @@ public class Site {
     }
 
     public static void main(String[] args) {
+        int a = 0, g = 0, c = 0;
         Scanner sc = new Scanner(System.in).useDelimiter("\n");
         int price, room, meter, number;
         String address;
-
-        int a = 0, g = 0, c = 0;
 
         Vector<String> Apartamente_V = new Vector<>();
         Vector<String> Garsoniera_V = new Vector<>();
@@ -47,7 +47,7 @@ public class Site {
 
             if (Menu_number == 1) {
                 try {
-                    File Lista_apartamente = new File("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Apartamente.txt");
+                    File Lista_apartamente = new File("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\chirias\\oferte\\Apartamente.txt");
 
                     Scanner sl = new Scanner(Lista_apartamente);
 
@@ -63,18 +63,9 @@ public class Site {
                     a++;
                 }
 
-                int raspuns;
-                System.out.print("Alegeti oferta pe care o doriti sa o inchiriatai prin tastand numarul ofertei ");
-                raspuns = sc.nextInt();
-                if (raspuns >= 0 && raspuns <= a) {
-                    System.out.println(raspuns + ". " + Apartamente_V.get(raspuns) + " ");
-                    String offer = Apartamente_V.get(raspuns);
-
-                }
-
             } else if (Menu_number == 2) {
                 try {
-                    File Lista_garsoniera = new File("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Garsoniera.txt");
+                    File Lista_garsoniera = new File("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\chirias\\oferte\\Garsoniera.txt");
 
                     Scanner sl = new Scanner(Lista_garsoniera);
 
@@ -93,7 +84,7 @@ public class Site {
 
             } else if (Menu_number == 3) {
                 try {
-                    File Lista_camera = new File("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Camera.txt");
+                    File Lista_camera = new File("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\chirias\\oferte\\Camera.txt");
 
                     Scanner sl = new Scanner(Lista_camera);
 
@@ -135,7 +126,7 @@ public class Site {
                     System.out.print("Se adauga oferta de chirie apartament in site la sectiunea de apartamente: ");
                     System.out.println(apart.toString());
 
-                    appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Apartamente.txt", apart.toString());
+                    appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\chirias\\oferte\\Apartamente.txt", apart.toString());
                 } else if (choose == 2) {
                     System.out.print("\nScrieti addresa pentru garosniera ");
                     address = sc.next();
@@ -151,7 +142,7 @@ public class Site {
                     gars.setPut_number(number);
                     System.out.println(apart.toString());
 
-                    appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Garsoniera.txt", gars.toString());
+                    appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\chirias\\oferte\\Garsoniera.txt", gars.toString());
                 } else if (choose == 3) {
                     String la;
                     System.out.print("Scrieti daca camera se afla la apartament/bloc sau casa ");
@@ -171,7 +162,7 @@ public class Site {
                     cam.setPut_number(number);
                     System.out.println(apart.toString());
 
-                    appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Camera.txt", cam.toString());
+                    appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\chirias\\oferte\\Camera.txt", cam.toString());
                 } else
                     System.out.println("Ati introdus un numar care nu este disponibil in meniu");
             } else
