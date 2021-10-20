@@ -55,6 +55,8 @@ public class Apartamente_gui extends JFrame {
                 user.isMajor(v);
                 user.AccountMail(Email.getText());
                 user.PhoneNumber(Telefon.getText());
+                String User = Varsta.getText() + Nume.getText() + Telefon.getText()
+                site.appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Site\\oferte\\User.txt", );
             }
         });
 
