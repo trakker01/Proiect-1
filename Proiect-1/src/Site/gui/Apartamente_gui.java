@@ -90,11 +90,11 @@ public class Apartamente_gui extends JFrame {
         Apartamente.setVisible(true);
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         JFrame Apartamente_l = new JFrame("Apartamente Oferte");
         Apartamente_l.setContentPane(new Apartamente_gui().Apartamente);
         Apartamente_l.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Apartamente_l.pack();
         Apartamente_l.setVisible(true);
-    }
+    }*/
 }

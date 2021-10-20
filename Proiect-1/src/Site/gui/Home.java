@@ -37,11 +37,12 @@ public class Home {
                     System.out.println("A aparut o eroare cu list de oferte. ");
                     e.printStackTrace();
                 }
+                System.out.println("Ofertele de Apartamente");
                 for (int i = a; i < Apartamente_V.size(); i++) {
                     System.out.println(i + ". " + Apartamente_V.get(i) + " ");
                     a++;
                 }
-
+                System.out.println("\n\n");
             }
         });
 
@@ -56,7 +57,7 @@ public class Home {
                 }
             }
         });
-       // apart_gui.Apartamente.setVisible(false);
+        // apart_gui.Apartamente.setVisible(false);
         MyPanel.setVisible(true);
 
         GarsoniereButton.addActionListener(new ActionListener() {
@@ -77,18 +78,22 @@ public class Home {
                     System.out.println("A aparut o eroare cu lista de oferte. ");
                     e.printStackTrace();
                 }
+                System.out.println("Ofertele de garsoniera");
                 for (int i = g; i < Garsoniera_V.size(); i++) {
                     System.out.println(Garsoniera_V.get(i) + " ");
                     g++;
                 }
+                System.out.println("\n\n");
             }
+
+
         });
 
         Garsoniera_alg.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                MyPanel.setVisible(false);
+                MyPanel.disable();
                 Garsoniera_gui gars = new Garsoniera_gui();
                 gars.PanelG.setVisible(true);
             }
