@@ -23,7 +23,7 @@ public class adaugare {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int t = 1;
-                String Oferta = "Apartament la " + Pretul.getText()  + " de euro cu adresa urmatoare: " + Strada.getText() + " cu marimea de " + Marime.getText()  + " metri patrati cu " + Camere.getText() + " camere. Contact la numarul de telefon urmator: " + telefon.getText() + ".";
+                String Oferta = "Apartament la pretul de " + Pretul.getText()  + " euro cu adresa urmatoare: " + Strada.getText() + " cu marimea de " + Marime.getText()  + " metri patrati cu " + Camere.getText() + " camere. Contact la numarul de telefon urmator: " + telefon.getText() + ".";
 
                 site.appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Site\\oferte\\Apartamente.txt", Oferta);
 
@@ -34,7 +34,7 @@ public class adaugare {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int t = 2;
-                String Oferta = "Garsoniera la " + Pretul.getText()  + " de euro cu adresa urmatoare: " + Strada.getText() + " cu marime de  " + Marime.getText() + " metri patrati. Contact la numarul de telefon urmator: " + telefon.getText() + ".";
+                String Oferta = "Garsoniera la pretul de " + Pretul.getText()  + " euro cu adresa urmatoare: " + Strada.getText() + " cu marime de  " + Marime.getText() + " metri patrati. Contact la numarul de telefon urmator: " + telefon.getText() + ".";
 
                 site.appendStrtoFile("D:\\Programare pe obiecte\\Proiect-1\\Proiect-1\\src\\Site\\oferte\\Garsoniera.txt", Oferta);
             }

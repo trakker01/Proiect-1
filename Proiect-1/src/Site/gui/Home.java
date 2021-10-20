@@ -17,7 +17,8 @@ public class Home {
 
     public Home() {
 
-        Apartamente_gui apart_gui = new Apartamente_gui();
+        //Apartamente_gui apart_gui = new Apartamente_gui();
+        //Cod_scris_apart stock = new Cod_scris_apart();
 
         ApartamenteButton.addActionListener(new ActionListener() {
             @Override
@@ -47,14 +48,15 @@ public class Home {
         Apartament_alg.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (e.getSource().equals(Apartament_alg)) {
 
-                MyPanel.setVisible(false);
-                //Apartamente_gui apart_gui = new Apartamente_gui();
-                apart_gui.Apartamente.setVisible(true);
-
+                    Apartamente_gui apart_gui = new Apartamente_gui();
+                    apart_gui.Apartamente.setVisible(true);
+                    Cod_scris_apart stock = new Cod_scris_apart();
+                }
             }
         });
-        apart_gui.Apartamente.setVisible(false);
+       // apart_gui.Apartamente.setVisible(false);
         MyPanel.setVisible(true);
 
         GarsoniereButton.addActionListener(new ActionListener() {

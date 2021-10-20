@@ -15,6 +15,7 @@ public class plata {
     private JButton Finalizat;
 
     public plata(){
+
         Finalizat.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent y) {

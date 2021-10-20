@@ -81,13 +81,20 @@ public class Apartamente_gui extends JFrame {
         MainMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                Apartamente.setVisible(false);
                 Home h = new Home();
                 h.MyPanel.setVisible(true);
+                Apartamente.setVisible(false);
+
             }
         });
-        setVisible(true);
+        Apartamente.setVisible(true);
     }
 
+    public static void main(String[] args) {
+        JFrame Apartamente_l = new JFrame("Apartamente Oferte");
+        Apartamente_l.setContentPane(new Apartamente_gui().Apartamente);
+        Apartamente_l.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Apartamente_l.pack();
+        Apartamente_l.setVisible(true);
+    }
 }
